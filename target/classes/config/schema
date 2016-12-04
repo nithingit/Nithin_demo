@@ -1,0 +1,10 @@
+CREATE TABLE "public".patient ( id serial,
+fname varchar(50),
+lname varchar(50),
+age integer,
+dob timestamp,
+gender varchar(10),
+phone varchar(10),
+overview varchar(300),
+CONSTRAINT pk_pat PRIMARY KEY ( id )
+ );

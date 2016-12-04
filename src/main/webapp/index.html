@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title></title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+   
+  
+    <script type="text/javascript" src="resources/js/libs/angularjs/angular.js"></script>
+    <script type="text/javascript" src="resources/js/libs/angularjs/angular-ui-router.min.js"></script>
+     <script type="text/javascript" src="app/module.js"></script>
+    
+   <script type="text/javascript" src="app/views/homepage/entry/patientManager.js"></script>
+    <script type="text/javascript" src="app/views/homepage/directory/patientDirectory.js"></script>
+   <script type="text/javascript" src="app/views/homepage/entry/patientEntry.js"></script>
+
+</head>
+
+<body id="db" class="homepage" ng-app="patientApp">
+<div class="top">
+<a ui-sref="patientEntry" ng-init="showIcon=1"><span id="hb" title="Register" ng-click="showIcon = 1" ng-class="(showIcon == 1)?'selected':''">Register</span></a>
+            <a ui-sref="patientsView"> <span id="hb" title="View" ng-click="showIcon = 2" ng-class="(showIcon == 2)?'selected':''">View Patients</span> </a>
+    </div>
+    <ui-view></ui-view>
+
+</body>
+
+</html>

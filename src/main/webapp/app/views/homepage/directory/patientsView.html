@@ -1,0 +1,45 @@
+
+<div class="container">
+	 <h1 class="well">View Patients</h1>
+	<input type="text" placeholder="Search for patients" ng-model="searchPatients">
+	<div class="projectPanelContainer referencesect">
+
+<div id="referencerPopup">
+		<div class="refsec commonmodule" ng-init="clickedRef = 0"
+			ng-class="(clickedRef == $index)?'selected':''"
+			ng-repeat="patient in patients|filter:{fname:searchPatients} track by $index">
+ <div class="titlemodule" ng-click="clickedRef = $index">Patient {{$index+1}}</div>
+			
+			<div class="refsecdet" ng-show="clickedRef == $index">
+				<div class="referencedetails" >
+					<div ng-if="patient.fname">
+						<p class="refhead">First Name:</p>
+						<p>{{patient.fname}}</p>
+					</div>
+<div ng-if="patient.lname">
+						<p class="refhead">Last Name:</p>
+						<p>{{patient.lname}}</p>
+					</div>
+				
+				<div ng-if="patient.gender">
+						<p class="refhead">Gender:</p>
+						<p>{{patient.gender}}</p>
+					</div>
+				
+				<div ng-if="patient.phone">
+						<p class="refhead">Contact NUmber:</p>
+						<p>{{patient.phone}}</p>
+					</div>
+				<div ng-if="patient.overview">
+						<p class="refhead">OverView:</p>
+						<p>{{patient.overview}}</p>
+					</div>
+			</div>
+
+
+</div>
+
+		</div>
+	</div>
+</div>
+</div>
